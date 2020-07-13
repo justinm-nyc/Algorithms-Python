@@ -10,6 +10,7 @@ def partition(arr,low,high):
     print(arr)
   #Put the partition in the correct index. Everything before the partition index will be less than the partition and everything after will be greater than the partition
   arr[i+1],arr[high] = arr[high],arr[i+1]
+  #return partition index
   return i + 1
 
 def quickSort(arr,low,high):
