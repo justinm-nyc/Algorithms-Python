@@ -28,7 +28,19 @@ class BinarySearchTree:
           else:
             currentNode = currentNode.right 
 
-  # def lookup(self, value):
+  def lookup(self, value):
+    if self.root == None:
+      return False
+
+    currentNode = self.root
+    while(currentNode):
+      if value == currentNode.value:
+        return currentNode
+      if value < currentNode.value:
+        currentNode = currentNode.left
+      else:
+        currentNode = currentNode.right
+    return False
 
   # def remove(self, value):
 
@@ -42,7 +54,7 @@ tree.insert(170)
 tree.insert(15)
 tree.insert(1)
 
-
-#     9
-#  4     20
-#1  6  15  170
+tree.lookup(213)
+tree.lookup(1)
+tree.lookup(9)
+tree.lookup(0)
