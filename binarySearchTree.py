@@ -42,14 +42,6 @@ tree.insert(170)
 tree.insert(15)
 tree.insert(1)
 
-# print(tree.root.value)
-# print(tree.root.left.value)
-# print(tree.root.right.value)
-# print(tree.root.left.left.value)
-# print(tree.root.left.right.value)
-# print(tree.root.right.left.value)
-# print(tree.root.right.right.value)
-
 
 #     9
 #  4     20
