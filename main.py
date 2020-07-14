@@ -42,7 +42,22 @@ class BinarySearchTree:
         currentNode = currentNode.right
     return False
 
-  # def remove(self, value):
+  def breadthFirstSearch(self):
+    currentNode = self.root
+    myList = []
+    queue = []
+    queue.append(currentNode)
+
+    while(len(queue) > 0):
+      currentNode = queue.pop(0)
+      myList.append(currentNode.value)
+      if(currentNode.left != None):
+        queue.append(currentNode.left)
+      if(currentNode.right != None):
+        queue.append(currentNode.right)
+
+    return myList
+
 
 
 tree = BinarySearchTree();
@@ -59,15 +74,9 @@ tree.lookup(1)
 tree.lookup(9)
 tree.lookup(0)
 
+print(tree.breadthFirstSearch())
+
 
 #     9
 #  4     20
 #1  6  15  170
-
-# print(tree.root.value)
-# print(tree.root.left.value)
-# print(tree.root.right.value)
-# print(tree.root.left.left.value)
-# print(tree.root.left.right.value)
-# print(tree.root.right.left.value)
-# print(tree.root.right.right.value)
